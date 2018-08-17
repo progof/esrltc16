@@ -224,10 +224,10 @@ with `-txconfirmtarget=<m>` (default: `2`).
 
 Sometimes, it is not possible to give good estimates, or an estimate
 at all. Therefore, a fallback value can be set with `-fallbackfee=<f>`
-(default: `0.0002` ESR/kB).
+(default: `0.0002` LTC/kB).
 
 At all times, Litecoin Core will cap fees at `-maxtxfee=<x>` (default:
-0.10) ESR.
+0.10) LTC.
 Furthermore, Litecoin Core will never create transactions paying less than
 the current minimum relay fee.
 Finally, a user can set the minimum fee rate for all transactions with
