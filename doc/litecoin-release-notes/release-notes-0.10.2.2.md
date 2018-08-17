@@ -51,10 +51,10 @@ is included in as separate release-notes.  This section describes the Litecoin-s
 
 Protocol:
 - Scrypt Proof-of-Work instead of sha256d, however block hashes are sha256d for performance reasons.
-- Litecoin TCP port 9333 (instead of 8333)
-- RPC TCP port 9332 (instead of 8332)
-- Testnet TCP port 19333 (instead of 18333)
-- Testnet RPC TCP port 19332 (instead of 18332)
+- Litecoin TCP port 7393 (instead of 8333)
+- RPC TCP port 7392 (instead of 8332)
+- Testnet TCP port 17393 (instead of 18333)
+- Testnet RPC TCP port 17392 (instead of 18332)
 - 84 million coin limit  (instead of 21 million)
 - Magic 0xfbc0b6db       (instead of 0xf9beb4d9)
 - Target Block Time 2.5 minutes (instead of 10 minutes)
@@ -67,11 +67,11 @@ Protocol:
 Relay:
 - Litecoin Core rounds transaction size up to the nearest 1000 bytes before calculating fees.  This size rounding behavior is to mimic fee calculation of Litecoin v0.6 and v0.8.
 - Bitcoin's IsDust() is disabled in favor of Litecoin's fee-based dust penalty.
-- Fee-based Dust Penalty: For each transaction output smaller than DUST_THRESHOLD (currently 0.001 LTC) the default relay/mining policy will expect an additional 1000 bytes of fee.  Otherwise the transaction will be rejected from relay/mining.  Such transactions are also disqualified from the free/high-priority transaction rule.
+- Fee-based Dust Penalty: For each transaction output smaller than DUST_THRESHOLD (currently 0.001 ESR) the default relay/mining policy will expect an additional 1000 bytes of fee.  Otherwise the transaction will be rejected from relay/mining.  Such transactions are also disqualified from the free/high-priority transaction rule.
 - Miners and relays can adjust the expected fee per-KB with the -minrelaytxfee parameter.
 
 Wallet:
-- Coins smaller than 0.00001 LTC are by default ignored by the wallet.  Use the -mininput parameter if you want to see smaller coins.
+- Coins smaller than 0.00001 ESR are by default ignored by the wallet.  Use the -mininput parameter if you want to see smaller coins.
 
 Notable changes since Litecoin v0.8
 ===================================

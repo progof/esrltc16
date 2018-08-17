@@ -224,10 +224,10 @@ with `-txconfirmtarget=<m>` (default: `2`).
 
 Sometimes, it is not possible to give good estimates, or an estimate
 at all. Therefore, a fallback value can be set with `-fallbackfee=<f>`
-(default: `0.0002` LTC/kB).
+(default: `0.0002` ESR/kB).
 
 At all times, Litecoin Core will cap fees at `-maxtxfee=<x>` (default:
-0.10) LTC.
+0.10) ESR.
 Furthermore, Litecoin Core will never create transactions paying less than
 the current minimum relay fee.
 Finally, a user can set the minimum fee rate for all transactions with
@@ -361,9 +361,9 @@ arbitrary TCP connections inside SSL. On e.g. Ubuntu it can be installed with:
 
     sudo apt-get install stunnel4
 
-Then, to tunnel a SSL connection on 29332 to a RPC server bound on localhost on port 19334 do:
+Then, to tunnel a SSL connection on 27392 to a RPC server bound on localhost on port 19334 do:
 
-    stunnel -d 29332 -r 127.0.0.1:19334 -p stunnel.pem -P ''
+    stunnel -d 27392 -r 127.0.0.1:19334 -p stunnel.pem -P ''
 
 It can also be set up system-wide in inetd style.
 
@@ -381,8 +381,8 @@ caching. A sample config for apache2 could look like:
     SSLCertificateKeyFile /etc/apache2/ssl/server.key
 
     <Location /litecoinrpc>
-        ProxyPass http://127.0.0.1:9332/
-        ProxyPassReverse http://127.0.0.1:9332/
+        ProxyPass http://127.0.0.1:7392/
+        ProxyPassReverse http://127.0.0.1:7392/
         # optional enable digest auth
         # AuthType Digest
         # ...
