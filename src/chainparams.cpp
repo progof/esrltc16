@@ -112,14 +112,15 @@ public:
          * The characters are rarely used upper ASCII, not valid as UTF-8, and produce
          * a large 32-bit integer with any alignment.
          */
-        pchMessageStart[0] = 0xfb;
-        pchMessageStart[1] = 0xc0;
-        pchMessageStart[2] = 0xb6;
-        pchMessageStart[3] = 0xdb;
+        pchMessageStart[0] = 0xa5;
+        pchMessageStart[1] = 0x62;
+        pchMessageStart[2] = 0xd8;
+        pchMessageStart[3] = 0xc8;
         nDefaultPort = 9333;
         nPruneAfterHeight = 100000;
 
-        genesis = CreateGenesisBlock(1534514831, 2084524493, 0x1e0ffff0, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1534514831, 2084624021, 0x1e0ffff0, 1, 50 * COIN);
+        // nnonce 2084524493
         consensus.hashGenesisBlock = genesis.GetHash();
         assert(consensus.hashGenesisBlock == uint256S("0xee753a7c8a2ea1103c26d83e594607ef9744b8ec906ede9ee70600e665b22837"));
         assert(genesis.hashMerkleRoot == uint256S("0x97ddfbbae6be97fd6cdf3e7ca13232a3afff2353e29badfab7f73011edd4ced9"));
@@ -203,10 +204,10 @@ public:
         // By default assume that the signatures in ancestors of this block are valid.
         consensus.defaultAssumeValid = uint256S("0xa0afbded94d4be233e191525dc2d467af5c7eab3143c852c3cd549831022aad6"); //343833
 
-        pchMessageStart[0] = 0xfd;
-        pchMessageStart[1] = 0xd2;
-        pchMessageStart[2] = 0xc8;
-        pchMessageStart[3] = 0xf1;
+        pchMessageStart[0] = 0x5d;
+        pchMessageStart[1] = 0x93;
+        pchMessageStart[2] = 0xa3;
+        pchMessageStart[3] = 0xb9;
         nDefaultPort = 19335;
         nPruneAfterHeight = 1000;
 
