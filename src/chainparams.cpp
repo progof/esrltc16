@@ -119,10 +119,10 @@ public:
         nDefaultPort = 7393;
         nPruneAfterHeight = 100000;
 
-        genesis = CreateGenesisBlock(1534514831, 2084624021, 0x1e0ffff0, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1534596255, 2084730967, 0x1e0ffff0, 1, 50 * COIN);
         // nnonce 2084524493
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0xee753a7c8a2ea1103c26d83e594607ef9744b8ec906ede9ee70600e665b22837"));
+        assert(consensus.hashGenesisBlock == uint256S("0x5de332769c3e6c9ae00285e047b8b871e3c04d8731b1eb0bcbd4c0b684cc78a2"));
         assert(genesis.hashMerkleRoot == uint256S("0x00d5c1fabe2cae939f01cf97f781bc052182171faccbdf9880843b67644f0bf3"));
 
         // Note that of those with the service bits flag, most only support a subset of possible options
@@ -149,14 +149,14 @@ public:
 
         checkpointData = {
             {
-                {  0, uint256S("0xee753a7c8a2ea1103c26d83e594607ef9744b8ec906ede9ee70600e665b22837")},
+                {  0, uint256S("0x5de332769c3e6c9ae00285e047b8b871e3c04d8731b1eb0bcbd4c0b684cc78a2")},
 
             }
         };
 
         chainTxData = ChainTxData{
             // Data as of block 59c9b9d3fec105bdc716d84caa7579503d5b05b73618d0bf2d5fa639f780a011 (height 1353397).
-            1534514831, // * UNIX timestamp of last known number of transactions
+            1534596255, // * UNIX timestamp of last known number of transactions
             0,  // * total number of transactions between genesis and that timestamp
                     //   (the tx=... number in the SetBestChain debug.log lines)
             1.0     // * estimated number of transactions per second after that timestamp
@@ -211,10 +211,10 @@ public:
         nDefaultPort = 17373;
         nPruneAfterHeight = 1000;
 
-        genesis = CreateGenesisBlock(1486949366, 293345, 0x1e0ffff0, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1534595912, 497945, 0x1e0ffff0, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x4966625a4b2851d9fdee139e56211a0d88575f59ed816ff5e6a63deb4e3e29a0"));
-        assert(genesis.hashMerkleRoot == uint256S("0x97ddfbbae6be97fd6cdf3e7ca13232a3afff2353e29badfab7f73011edd4ced9"));
+        assert(consensus.hashGenesisBlock == uint256S("0xd481b486cdb46a74fbce25a63c17df78963b2d9b6c54330f97a51e08522eca68"));
+        assert(genesis.hashMerkleRoot == uint256S("0x00d5c1fabe2cae939f01cf97f781bc052182171faccbdf9880843b67644f0bf3"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
@@ -240,15 +240,15 @@ public:
 
         checkpointData = (CCheckpointData) {
             {
-                {2056, uint256S("17748a31ba97afdc9a4f86837a39d287e3e7c7290a08a1d816c5969c78a83289")},
+                {0, uint256S("d481b486cdb46a74fbce25a63c17df78963b2d9b6c54330f97a51e08522eca68")},
             }
         };
 
         chainTxData = ChainTxData{
             // Data as of block a0afbded94d4be233e191525dc2d467af5c7eab3143c852c3cd549831022aad6 (height 343833)
-            1516406749,
-            794057,
-            0.01
+            1534595912,
+            0,
+            1.0
         };
 
     }
@@ -269,7 +269,7 @@ public:
         consensus.BIP66Height = 1251; // BIP66 activated on regtest (Used in rpc activation tests)
         consensus.powLimit = uint256S("7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         consensus.nPowTargetTimespan = 3.5 * 24 * 60 * 60; // two weeks
-        consensus.nPowTargetSpacing = 2.5 * 60;
+        consensus.nPowTargetSpacing = 5 * 60;
         consensus.fPowAllowMinDifficultyBlocks = true;
         consensus.fPowNoRetargeting = true;
         consensus.nRuleChangeActivationThreshold = 108; // 75% for testchains
