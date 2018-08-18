@@ -123,7 +123,7 @@ public:
         // nnonce 2084524493
         consensus.hashGenesisBlock = genesis.GetHash();
         assert(consensus.hashGenesisBlock == uint256S("0xee753a7c8a2ea1103c26d83e594607ef9744b8ec906ede9ee70600e665b22837"));
-        assert(genesis.hashMerkleRoot == uint256S("0x97ddfbbae6be97fd6cdf3e7ca13232a3afff2353e29badfab7f73011edd4ced9"));
+        assert(genesis.hashMerkleRoot == uint256S("0x00d5c1fabe2cae939f01cf97f781bc052182171faccbdf9880843b67644f0bf3"));
 
         // Note that of those with the service bits flag, most only support a subset of possible options
         vSeeds.emplace_back("seed-a.litecoin.loshan.co.uk");
